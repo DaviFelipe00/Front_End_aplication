@@ -5,85 +5,129 @@
     box-sizing: border-box;
 }
 
+/* Configuração global */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    color: #333;
     background-color: #f9f9f9;
+    color: #333;
 }
 
+/* Header */
 header {
-    background: #004080;
-    color: #fff;
+    background: linear-gradient(135deg, #004080, #0066cc);
+    color: white;
     padding: 20px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
 }
 
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 .logo h1 {
+    font-size: 2.5em;
+    font-weight: 700;
+    letter-spacing: 1px;
     margin-left: 20px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .nav-links {
     list-style: none;
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
 }
 
 .nav-links li {
-    display: inline;
-    margin-right: 15px;
+    margin-left: 30px;
 }
 
 .nav-links a {
-    color: #fff;
+    color: white;
     text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 600;
+    transition: color 0.3s ease, transform 0.3s ease;
+    padding: 5px 10px;
+    border-radius: 5px;
 }
 
 .nav-links a:hover {
     color: #ffcc00;
+    transform: scale(1.1);
+    background-color: rgba(255, 204, 0, 0.2);
 }
 
+.nav-links a:focus {
+    outline: none;
+    background-color: rgba(255, 204, 0, 0.4);
+}
+
+/* Hero Section */
 .hero {
-    text-align: center;
-    padding: 50px 20px;
-    background: #0066cc;
+    background-color: #0066cc;
     color: white;
+    padding: 60px 20px;
+    text-align: center;
 }
 
 .hero h2 {
-    
-    font-size: 4.5em;
-}
-
-.hero p {
-    margin: 20px 0;
-}
-
-.hero .btn {
-    padding: 10px 20px;
-    background: #ffcc00;
-    color: #333;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-.hero .btn:hover {
-    background: #dbaf01;
-}
-
-#services {
-    padding: 40px 0;
-    background: #f1f1f1;
-}
-
-#services h2 {
-    text-align: center;
+    font-size: 3em;
     margin-bottom: 20px;
 }
 
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.hero .btn {
+    background-color: #ffcc00;
+    color: #333;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+}
+
+.hero .btn:hover {
+    background-color: #dbaf01;
+}
+
+/* Serviços */
+#services {
+    background-color: #f1f1f1;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#services h2 {
+    margin-bottom: 30px;
+    font-size: 2.5em;
+}
+
+/* Animação de movimento para os cards */
+@keyframes slideIn {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Contêiner de serviços */
 .services-container {
     display: flex;
     flex-wrap: wrap;
@@ -91,58 +135,69 @@ nav {
     justify-content: center;
 }
 
+/* Card de serviço */
 .service-card {
-    background: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    overflow: hidden;
+    background-color: white;
     width: 300px;
-    text-align: center;
-    transition: transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0; /* Inicialmente invisível */
+    transform: translateY(30px); /* Inicialmente fora de posição */
+    animation: slideIn 0.8s forwards; /* Aplique a animação */
 }
 
+/* Sobressaltando o card com hover */
 .service-card:hover {
-    transform: scale(1.05);
+    transform: scale(1.1) translateY(-10px); /* Aumenta o tamanho e move para cima */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Aumenta a sombra */
+    transition: transform 0.4s ease, box-shadow 0.4s ease; /* Transição mais suave */
 }
 
 .service-card img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
 }
 
 .service-card h3 {
-    background: #0066cc;
-    color: #fff;
-    margin: 0;
+    background-color: #0066cc;
+    color: white;
     padding: 10px 0;
+    font-size: 1.5em;
 }
 
 .service-card p {
     padding: 15px;
 }
 
+/* Sobre Nós */
 #about {
-    padding: 40px 0;
+    padding: 40px 20px;
+    text-align: center;
 }
 
 #about h2 {
-    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 20px;
 }
 
 #about p {
     max-width: 800px;
     margin: 0 auto;
+    font-size: 1.2em;
 }
 
+/* Contato */
 #contact {
-    padding: 40px 0;
-    background: #e6e6e6;
+    background-color: #e6e6e6;
+    padding: 40px 20px;
     text-align: center;
 }
 
 #contact h2 {
-    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 20px;
 }
 
 form {
@@ -153,33 +208,105 @@ form {
 label {
     display: block;
     margin-bottom: 5px;
+    font-size: 1.1em;
 }
 
-input, textarea {
+input,
+textarea {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    font-size: 1em;
 }
 
 button {
-    margin: auto;
     padding: 10px 20px;
-    background: #0066cc;
+    background-color: #0066cc;
     color: white;
+    font-size: 1.1em;
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
 
 button:hover {
-    background: #ffcc00;
+    background-color: #ffcc00;
 }
 
+/* Footer */
 footer {
     text-align: center;
-    padding: 20px 0;
-    background: #333;
+    background-color: #333;
     color: white;
+    padding: 20px 0;
+}
+
+/* Animações */
+.fade {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsividade para iPhone XR */
+@media (max-width: 414px) {
+    body {
+        font-size: 14px;
+    }
+
+    .logo h1 {
+        font-size: 2em;
+        margin-left: 10px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hero h2 {
+        font-size: 2em;
+    }
+
+    .hero p {
+        font-size: 1.1em;
+    }
+
+    .btn {
+        font-size: 1.1em;
+        padding: 12px 25px;
+    }
+
+    #services h2 {
+        font-size: 2em;
+    }
+
+    .services-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-card {
+        width: 90%;
+        margin: 10px 0;
+    }
+
+    #contact form {
+        width: 90%;
+    }
+
+    footer {
+        padding: 15px 0;
+    }
 }

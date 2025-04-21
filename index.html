@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Empresa</title>
     <link rel="stylesheet" href="./style.css">
+    <script src="./script.js"></script>
+    <link rel="icon" href="./img/energia-eletrica.png" type="image/png">
 </head>
 <body>
-    <header>
+    <header class="fade">
         <nav>
             <div class="logo">
                 <h1>Nome da Empresa</h1>
@@ -20,27 +22,26 @@
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero fade">
         <h2>Soluções Elétricas Profissionais e Seguras</h2>
         <p>Garantimos a segurança e eficiência das instalações elétricas residenciais e comerciais.</p>
         <a href="#contact" class="btn">Peça um Orçamento</a>
     </section>
 
-    <section id="services">
+    <section id="services" class="fade">
         <h2>Nossos Serviços</h2>
-        <div class="services-container">
-            <div class="service-card">
+        <div class="services-container fade">
+            <div class="service-card fade">
                 <img src="./img/eletricista_1.jpg" alt="Instalações Residenciais">
                 <h3>Instalações Residenciais</h3>
                 <p>Realizamos instalações e manutenções elétricas para sua casa com segurança e qualidade.</p>
             </div>
-            <div class="service-card">
+            <div class="service-card fade">
                 <img src="./img/eletricista_4.jpg" alt="Manutenção Comercial">
                 <h3>Manutenção Comercial</h3>
                 <p>Garantimos o funcionamento contínuo do sistema elétrico do seu negócio.</p>
             </div>
-            <div class="service-card">
+            <div class="service-card fade">
                 <img src="./img/eletricista_2.jpg" alt="Projetos Personalizados">
                 <h3>Projetos Personalizados</h3>
                 <p>Desenvolvemos projetos elétricos de acordo com as suas necessidades.</p>
@@ -48,16 +49,14 @@
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about">
+    <section id="about" class="fade">
         <h2>Sobre Nós</h2>
         <p>Com mais de 10 anos de experiência, a "Nome da empresa" se destaca pela qualidade e segurança nas soluções elétricas. Nossa equipe é formada por profissionais certificados e comprometidos com a satisfação do cliente.</p>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact">
+    <section id="contact" class="fade">
         <h2>Contato</h2>
-        <form action="#" method="post">
+        <form id="contact-form" action="#" method="post" class="fade">
             <label for="name">Nome:</label>
             <input type="text" id="name" name="name" required>
 
@@ -69,10 +68,12 @@
 
             <button type="submit">Enviar</button>
         </form>
+        <div id="response-message" style="display:none; margin-top: 20px; color: green;">
+            <p>Obrigado! Vamos entrar em contato no seu email em breve.</p>
+        </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
+    <footer class="fade">
         <p>&copy; 2025 - Nome da Empresa. Todos os direitos reservados.</p>
     </footer>
 </body>
