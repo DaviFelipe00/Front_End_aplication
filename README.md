@@ -1,4 +1,4 @@
-# Projeto FrontEnd - Empresa de Serviços Elétricos ⚡
+# Projeto FrontEnd - Empresa de Serviços Elétricos
 
 Este é um projeto de interface web desenvolvido para uma empresa de serviços elétricos. O objetivo é apresentar os serviços da empresa de forma moderna, interativa e responsiva.
 
